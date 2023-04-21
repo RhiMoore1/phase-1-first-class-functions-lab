@@ -53,10 +53,19 @@ const fareTripler = createFareMultiplier(3);
 // this function takes two arguments - an array of drivers - and
 // either the returnFirstTwoDrivers() or returnLastTwoDrivers() function
 // return either the first two or the last two drivers
-
 function selectDifferentDrivers(arrayOfDrivers, func) {
-    return func(arrayOfDrivers);
+    if (func === returnFirstTwoDrivers) {
+        return arrayOfDrivers.slice(0,2);
+    } else if (func === returnLastTwoDrivers) {
+        return arrayOfDrivers.slice(2,4);
+    }
 }
+
+
+// function selectDifferentDrivers(arrayOfDrivers, func) {
+//     return func(arrayOfDrivers);
+// }
+
 
 
 
